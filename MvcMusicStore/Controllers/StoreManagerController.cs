@@ -132,5 +132,15 @@ namespace MvcMusicStore.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult Search(string q)
+        {
+            var albums = db.Albums
+                            .Include("Artist")
+                            .Where(a => a.Title.Contains(q))
+                            .Take(10);
+
+            return View(albums);
+        }
     }
 }
