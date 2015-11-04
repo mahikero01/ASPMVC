@@ -14,7 +14,7 @@ namespace MvcMovie
     {
         protected void Application_Start()
         {
-            Database.SetInitializer<MvcMoviesEntities>(null);    
+            //Database.SetInitializer<MvcMoviesEntities>(null);    
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
